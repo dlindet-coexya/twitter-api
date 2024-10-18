@@ -43,7 +43,7 @@ node {
 		}
 	}
 
-	stage('Quality check') {
+	stage('Quality check ') {
 		withMaven(maven: 'maven') {
 			if(isUnix()) {
  				sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dlindet-coexya_twitter-api" 
