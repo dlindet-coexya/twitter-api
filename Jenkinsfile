@@ -46,9 +46,9 @@ node {
 	stage('Quality check ') {
 		withMaven(maven: 'maven') {
 			if(isUnix()) {
- 				sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dlindet-coexya_twitter-api" 
+ 				sh "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=org.springdoc:spring-boot-webmvc" 
 			} else { 
- 				bat "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dlindet-coexya_twitter-api" 
+ 				bat "mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=org.springdoc:spring-boot-webmvc" 
 			} 
 		}
 	}
